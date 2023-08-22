@@ -1,0 +1,43 @@
+//This exercise is to practicing using spread and rest operator
+
+function showAllFruit(...fruits) {
+    console.log(fruits);
+}// show all the fruits
+
+//join arrays
+const fruit = ['apple', 'pear', 'plum'];
+showAllFruit(...fruit);
+const berries = ['strawberries', 'blueberries'];
+const fruitsAndBerries = [...berries,...fruit]
+console.log(fruitsAndBerries)
+
+//joins objects
+const flying = {
+    wings: 2
+}
+const car = {
+    wheels :4
+}
+const flyingCar = {...flying, ...car}
+console.log(flyingCar);
+
+//add members to array without having to declare variables
+let veggies = ['onion', 'parsley'];
+veggies = [...veggies, 'carrot','beetroot']
+console.log(veggies);
+
+//convert a string to an array of that string
+const greeting = 'Hello';
+const arrayOfChars = [...greeting];
+console.log(arrayOfChars);
+
+//copy an object into a different object 
+const car1 = {
+    speed: 200,
+    color: 'yellow'
+}
+ const car2 = {...car1}
+ car2.speed = 100; //modify value using dot notation
+ car2.seats = 4;
+ console.log(car2);
+// you can do the same to array to copy a new different array 
